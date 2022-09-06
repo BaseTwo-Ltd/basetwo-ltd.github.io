@@ -18,8 +18,19 @@
       justify-content: flex-start;
     }
 
+    dl {
+      display: grid;
+      grid-template-columns: 1fr 10fr;
+      max-width: 800px;
+    }
+
     dt, dd {
-      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    dd:after {
+      content: ' ';
+      display: block;
     }
 
     dt {
@@ -56,6 +67,8 @@
     <dl>
       <dt>Email</dt>
       <dd><a href="mailto:mrmikemccabe@gmail.com">mrmikemccabe@gmail.com</a></dd>
+      <dt>LinkedIn</dt>
+      <dd><a href="https://www.linkedin.com/in/mike-mccabe-web-dev">https://www.linkedin.com/in/mike-mccabe-web-dev</a></dd>
     </dl>
   </main>
   <footer>
