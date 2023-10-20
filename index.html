@@ -9,7 +9,9 @@
     html, body {
       height: 100%;
     }
+
     body {
+      font-size: 1.3em;
       font-family: 'Courier New', Courier, monospace;
       padding: 0;
       margin: 0;
@@ -18,28 +20,47 @@
       justify-content: flex-start;
     }
 
+    a {
+      word-break: break-all;
+    }
+
     dl {
-      display: grid;
-      grid-template-columns: 1fr 10fr;
-      max-width: 800px;
+      display: flex;
+      flex-direction: column;
     }
 
     dt, dd {
-      margin-bottom: 10px;
-    }
-
-    dd:after {
-      content: ' ';
-      display: block;
+      margin-left: 0;
     }
 
     dt {
-      width: auto;
+      margin-bottom: .3em;
     }
 
-    dt:after {
-      content: ':'
+    dd {
+      margin-bottom: 2em;
     }
+
+    @media screen and (min-width: 38em) {
+      dl {
+        display: grid;
+        grid-template-columns: 1fr 10fr;
+      }
+
+      dt {
+        width: auto;
+        margin-right: 1em;
+      }
+
+      dd {
+        margin-bottom: 1em;
+      }
+
+      dt:after {
+        content: ':'
+      }
+    }
+
 
     header, main, footer {
       padding: 20px;
